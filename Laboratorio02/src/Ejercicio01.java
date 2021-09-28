@@ -1,3 +1,5 @@
+package Laboratorio02.src;
+
 //Laboratorio 2 - Lenguaje Java
 
 public class Ejercicio01 {
