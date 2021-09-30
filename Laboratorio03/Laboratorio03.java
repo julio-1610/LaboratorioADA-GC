@@ -8,7 +8,9 @@ class Laboratorio03 {
         System.out.println(matrix_search(matriz, 7));
 
     }
+    //Ejercicio01
     public static int binary_search(int[] arr, int x) {
+        //Algoritmo de búsqueda binaria para el arreglo a ingresar
         int first = 0, last = arr.length - 1;
         int m = arr.length/2;
         while(first <= last) {
@@ -22,7 +24,11 @@ class Laboratorio03 {
         }
         return -1;
     }
+    
+    //Ejercicio02
     public static String matrix_search(int[][] matrix, int x) {
+        //Busca un elemento dentro de una matriz 2D, además de utilizar 
+        //la búsqueda binaria
         for(int i = 0; i < matrix.length; i++) 
             if(matrix[i][matrix[i].length - 1] > x) {
                 int a = binary_search(matrix[i], x);
