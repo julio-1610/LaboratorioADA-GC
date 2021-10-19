@@ -23,4 +23,16 @@ def every_other(array):
       for ob in array:
         print(str(num) + " + " + str(ob))
 
-every_other([1, 2, 3])
+  # Complejidad de O(n²)
+
+# Ejercicio03
+def twoSum(array):
+  for i in range(len(array)):
+    for j in range(len(array)):
+      if (i != j and array[i] + array[j] == 10):
+        return True
+  
+  return False
+
+res = twoSum([1, 8, 9, 2, 7, 3])
+print(res)
