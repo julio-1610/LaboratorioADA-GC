@@ -1,19 +1,26 @@
 # Ejercicio 01
+
 import math
-def binarySearch(a, target):
-  N = len(a)
+def isSqrt(x):
+  # Dice si un número es cuadrado utilizando la búsqueda binaria
+  arr = [];
+  for i in range(x):
+    arr.append(i);
+  N = len(arr)
   L = 0
   R = N - 1
   while L <= R:
     mid = L + math.floor((R - L) / 2)
-    if (a[mid] == target):
-      return mid
-    if a[mid] < target:
+    if (arr[mid] * arr[mid] == x):
+      return True
+    if arr[mid] * arr[mid] < x:
       L = mid + 1
     else:
       R = mid - 1
-  return -1
+  return False
 
-arr = [2, 3, 3, 4, 5, 7, 8, 9]
-res = binarySearch(arr, 7)
+# TEST
+res = isSqrt(16)
+print(res)
+res = isSqrt(20)
 print(res)
